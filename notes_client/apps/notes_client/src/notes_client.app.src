@@ -1,0 +1,17 @@
+{application, notes_client,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, { notes_client_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    hackney
+   ]},
+  {env,[]},
+  {modules, [notes_store_client]},
+
+  {maintainers, []},
+  {licenses, []},
+  {links, []}
+ ]}.

@@ -1,0 +1,6 @@
+-sname notes_server
+
+-setcookie notes_server_cookie
+
++K true
++A30

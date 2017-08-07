@@ -1,0 +1,23 @@
+{application, notes_server,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, { notes_server_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    crypto,
+    ranch,
+    cowlib,
+    cowboy,
+    jiffy,
+    mnesia,
+    sasl
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {maintainers, []},
+  {licenses, []},
+  {links, []}
+ ]}.
