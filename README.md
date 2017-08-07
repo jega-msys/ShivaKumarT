@@ -40,3 +40,25 @@ Steps To Run Client:
 * make client_tests // It initates common_test framework to test client application
 * make client_shell // It runs the client in foreground
 
+Adding a note in client shell
+  notes_store_client:post(<<"notes_store">>, User, Title).
+
+Listing all notes of a specific user
+  notes_store_client:list(<<"notes_store">>, User).
+
+Get a specific note using note Id
+  notes_store_client:get(<<"notes_store">>, Id).
+
+If the client is other than notes_client application, then use below configuration to initiate a http request:
+ContentType: <<"application/json">>,
+Method: Post,
+URL: <<"ServerIp:8080">>,
+
+Payload to add a note
+  {"module":"notes_store","function":"post","user":"abc","title":"Title","note":"Note"}.
+
+Payload to get a retrive note
+  {"module":"notes_store","function":"get","id":"Id"}.
+
+Payload to list all notes of a specific user
+  {"module":"notes_store","function":"list","user":"User"}.
